@@ -39,6 +39,10 @@ app.use("/api/checkout", stripeRoute);
 //Read PORT from .env file OR Default set 5002
 const API_PORT = process.env.API_PORT || 5002;
 
+app.get("/", (req, res) => {
+	res.send("API is Runn....");
+});
+
 app.listen(API_PORT, () => {
 	console.log(`Backend Server is running on port ${API_PORT}`)
 })
