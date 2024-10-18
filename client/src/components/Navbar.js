@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import logo from '../images/logo.svg';
+import logo from '../images/logo.png';
 import { showCart } from '../redux/actions/cartActions';
 import { logout } from "../redux/actions/userActions";
 
@@ -58,8 +58,11 @@ const NavBar = () => {
 						</ul>
 					</div>
 					<div>
-						{/* <Link to="/"><img src={logo} className="nav-logo" alt="logo" /></Link> */}
-						<Link to="/" className="nav-logo">MDE</Link>
+						<Link to="/"><img src={logo} className="nav-logo" width={80} alt="logo" style={{
+							border: '2px solid #2c94f5',
+							borderRadius: '50%'
+						}} /></Link>
+						{/* <Link to="/" className="nav-logo">MDE</Link> */}
 
 					</div>
 					<div className="auth-section">
